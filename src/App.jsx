@@ -5,7 +5,17 @@ import ReactMarkdown from 'react-markdown';
 
 function App() {
   const [userInput, setUserInput] = useState("");
-  let prompt = "You are a chatbot specialized in the Unity game engine. Respond only with relevant information, advice, or solutions related to Unity development. If the user's question or statement is unrelated, politely redirect them by saying, 'I only answer Unity-related questions. plus return the headings as h1 and h2 in markdown' \n\nUser: " + userInput;
+  let prompt =  `
+  You are a chatbot specialized in the Unity game engine.
+
+  Your responsibilities:
+  - Respond only with relevant information, advice, or solutions related to Unity development (including C#, 2D/3D development, game mechanics, UI, performance, etc.).
+  - If the user's question or statement is unrelated to Unity, politely redirect them with this exact message: "I only answer Unity-related questions."
+  - Format your responses using Markdown:
+    - Use \`#\` for H1 headings
+    - Use \`##\` for H2 subheadings
+  userInput: `+ userInput;
+
   const [chatResponse, setChatResponse] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
@@ -23,6 +33,7 @@ function App() {
       });
       console.log(response.text)
       setChatResponse(response.text)
+      setUserInput("")
     } catch {
 
     } finally {
