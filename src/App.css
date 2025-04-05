@@ -1,65 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Liter&display=swap');
-.header{
-    height: 100px;
-    width: 100%;
+/* >>>>> MAIN STYLES <<<<< */
+    .main{
+        width: 100%;
 
-    background-color: black;
-    color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.header h2{
-    font-size: 4rem;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
+/* >>>>> HEADER CONTAINER <<<<< */
+    .header{
+        width: 100%;
+        height: 150px;
 
-.main{
-    padding: 40px;
-    width: 100%;
-    background-color: black;
-    color: white;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.main h2{
-    font-size: 2rem;
-    font-family: "Anton SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
+    .header h1{
+        width: 80%;
 
-.main ul{
-    letter-spacing: 1px;
-    font-size: 1rem;
-    font-family: "Antonio", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+        color: white;
+        font-size: 2rem;
 
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
+        border-bottom: 1px solid white;
 
-.main p{
-    letter-spacing: 1px;
-    font-size: 1rem;
-    font-family: "Antonio", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
 
-.displayResults{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* align-items: center; */
-    gap: 2rem;
-}
+
+/* >>>>> RESPONSE CONTAINER <<<<< */
+    .responseContainer{
+
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
+
+
+/* >>>>> INPUT CONTAINER <<<<< */
+    .inputContainer{
+        width: 100%;
+        height: 100px;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        position: fixed;
+        bottom: 30px;
+        right: 0;
+        left: 0;
+        /* z-index: 1; */
+    }
+
+    .inputContainer input{
+        width: 75%;
+        padding: 16px;
+        
+        font-size: 1.5rem;
+
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+
+    .inputContainer button{
+        width: 10%;
+
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .inputContainer input, .inputContainer button{
+        height: 100%;
+
+        background-color: white;
+        border: none;
+        outline: none;
+    }
+    /* >>> RESPONSIVE <<< */
+/*  */
