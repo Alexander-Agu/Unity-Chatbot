@@ -21,7 +21,7 @@ function App() {
         model: 'gemini-2.0-flash-001',
         contents: prompt,
       });
-
+      console.log(response.text)
       setChatResponse(response.text)
     } catch {
 

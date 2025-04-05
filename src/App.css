@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=KoHo:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
 /* >>>>> MAIN STYLES <<<<< */
     .main{
         width: 100%;
@@ -25,7 +29,10 @@
         width: 80%;
 
         color: white;
-        font-size: 2rem;
+        font-size: 4rem;
+        font-family: "Koulen", sans-serif;
+        font-weight: 400;
+        font-style: normal;
 
         border-bottom: 1px solid white;
 
@@ -34,14 +41,72 @@
         justify-content: center;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 600px) {
+        .header h1{
+            font-size: 2.5rem;
+        }
+    }
 /*  */
 
 
 /* >>>>> RESPONSE CONTAINER <<<<< */
     .responseContainer{
+        color: white;
 
+        width: 80%;
+        margin-bottom: 50%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    .responseContainer h1, .responseContainer h2{
+        font-family: "Koulen", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .responseContainer h1{
+        font-size: 2.5rem;
+    }
+
+    .responseContainer h2{
+        font-size: 2rem;
+    }
+
+    .responseContainer p, .responseContainer ul, .responseContainer ol{
+        font-size: 1.5rem;
+        font-family: "KoHo", sans-serif;
+        font-weight: 200;
+        font-style: normal;
+
+        padding-left: 20px;
+    }
+
+    .responseContainer li{
+        margin-left: 40px;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 600px) {
+        .responseContainer h1{
+            font-size: 2rem;
+        }
+        
+        .responseContainer h2{
+            font-size: 1.7rem;
+        }
+        .responseContainer p,
+        .responseContainer ul,
+        .responseContainer ol {
+            font-size: 1rem;
+        }
+        .responseContainer li {
+            margin-left: 20px;
+        }
+    }
 /*  */
 
 
@@ -87,4 +152,9 @@
         outline: none;
     }
     /* >>> RESPONSIVE <<< */
+    @media screen and (max-width: 600px) {
+        .inputContainer input{
+            font-size: 1rem;
+        }
+    }
 /*  */
